@@ -1,4 +1,3 @@
-CAMILA
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -48,4 +47,18 @@ CAMILA
         // em dias de produção das perdas com e sem sensor 
         let dia_sem = perda_sem * 10 / litrosLeite
         simulacao++;
+
+        div_mensagem.innerHTML += `
+            <b>Resumo da Simulação ${simulacao}</b><br> 
+            Você produz aproximadamente R$ ${total_queijo} kg de quiejo por dia. <br> 
+            O custo para produzir o leite em um dia é de R$ ${custo_producao_leite}.<br> 
+            Seu lucro estimado com a venda de todos queijos da produção é de R$ 
+            ${lucro_liquido_com_extra}<br><br> 
+            <b>Seus Riscos:</b><br> 
+            <span > Sem monitoramento, perda estimada: R$ ${perda_sem}</span><br> 
+            Com monitoramento, perda estimada: R$ ${perda_com}<br> 
+            (Sem monitoramento, equivale a aproximadamente ${dia_sem} dias de produção 
+            perdido)<br><br>;
+            `
+
     }
